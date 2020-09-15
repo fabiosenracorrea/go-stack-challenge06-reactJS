@@ -21,6 +21,11 @@ export const CardContainer = styled.section`
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 32px;
   margin-top: -150px;
+
+  @media (max-width: 860px) {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+  }
 `;
 
 export const Card = styled.div`
@@ -70,6 +75,7 @@ export const TableContainer = styled.section`
       font-size: 16px;
       font-weight: normal;
       color: #969cb3;
+      position: relative;
 
       &.title {
         color: #363f5f;
@@ -81,6 +87,22 @@ export const TableContainer = styled.section`
 
       &.outcome {
         color: #e83f5b;
+      }
+
+      button {
+        position: absolute;
+        right: 10%;
+        top: 0;
+        height: 100%;
+        border: none;
+        display: flex;
+        align-items: center;
+        background: none;
+        color: red;
+
+        svg {
+          pointer-events: none;
+        }
       }
     }
 
